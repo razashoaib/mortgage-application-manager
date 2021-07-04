@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  server:
+    build:
+      context: ../
+    volumes:
+      - ../:/var/lib/server:delegated
+      - /var/lib/server/node_modules/
+    ports:
+      - '3000:3000'
+    container_name: server
